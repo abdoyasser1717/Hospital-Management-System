@@ -1,5 +1,5 @@
 from .patient import Patient
-from common.utilities import *
+from ..common.utilities import *
 class hospital_manger:
     def __init__(self,specialization_count):
         self.specialization_count = specialization_count

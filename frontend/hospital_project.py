@@ -1,6 +1,6 @@
 
-from backend  import hospital_manger
-from common.utilities import *
+from ..backend  import hospital_manger
+from ..common.utilities import *
 
 class Frontend_Manger :
     def __init__(self,specialization_count=20):
