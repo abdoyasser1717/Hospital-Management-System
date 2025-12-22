@@ -1,8 +1,19 @@
-class Patient :
+from backend.Person import Person
+class Patient(Person) :
+    STATUS =  ["Super Urgent",'Urgent','Normal']
     def __init__(self,name,status):
-        self.name,self.status =name,status
+        super().__init__(name)
+        self.status =status
+
     def __str__(self):
-        status = ["Super Urgent",'Urgent','Normal'][self.status]
-        return f'Patient : {self.name} is {status}'
+        status_text = Patient.STATUS[self.status]
+        return f'Patient : {self.name} is {status_text}'
     def __repr__(self):
-        return F'Patient (name="{self.name}", status={self.status}'
+        return F'Patient (id = {self.id} , name="{self.name}", status={self.status})'
+if __name__ == '__main__':
+    p1 = Patient("Ahmed", 0)
+    p2 = Patient("Mona", 2)
+
+    print(p1)
+    print(repr(p1))
+    print(p2)
