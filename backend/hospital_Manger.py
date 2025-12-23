@@ -1,5 +1,5 @@
 from backend.doctor import Doctor
-from .patient import Patient
+from backend.patient import Patient
 # from ..common.utilities import *
 class hospital_manger:
     def __init__(self):
