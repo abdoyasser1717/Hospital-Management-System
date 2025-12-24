@@ -1,27 +1,27 @@
-from backend.doctor import Doctor
-from backend.patient import Patient
+from backend.storage import *
+
 # from ..common.utilities import *
 class hospital_manger:
     def __init__(self):
-        specializations_name = [
-            "General Medicine",
-            "Emergency",
-            "Cardiology",
-            "Orthopedics",
-            "Neurology",
-            "Surgery",
-            "Pediatrics",
-            "ENT",
-            "Dermatology",
-            "Gynecology & Obstetrics",
-            "ICU",
-            "Radiology",
-            "Laboratory"
-        ]
-        self.NORMAL = 0
-        self.URGENT = 1
-        self.SUPER_URGENT = 2
-        self.specializations =  {specialization : {"doctors" :[],"status":{self.NORMAL:[],self.URGENT:[],self.SUPER_URGENT:[]}} for specialization in specializations_name}
+        # specializations_name = [
+        #     "General Medicine",
+        #     "Emergency",
+        #     "Cardiology",
+        #     "Orthopedics",
+        #     "Neurology",
+        #     "Surgery",
+        #     "Pediatrics",
+        #     "ENT",
+        #     "Dermatology",
+        #     "Gynecology & Obstetrics",
+        #     "ICU",
+        #     "Radiology",
+        #     "Laboratory"
+        # ]
+        #
+        # self.specializations =  {specialization : {"doctors" :[],"status":{self.NORMAL:[],self.URGENT:[],self.SUPER_URGENT:[]}} for specialization in specializations_name}
+        data = load_data()
+        self.specializations = deserialize_specializations(data)
         self.MAX_QUE = 10
 
         # self.but_dummy_patient()
@@ -30,6 +30,8 @@ class hospital_manger:
         spce = self.specializations[specialization]
         pat = Patient(name,status)
         spce["status"][status].append(pat)
+        data = serialize_specializations(self.specializations)
+        save_data(data)
         return 'adding new patient successfully'
     def can_add_patient(self,specialization):
         num_patients = 0
@@ -42,6 +44,8 @@ class hospital_manger:
         spce = self.specializations[specialization]
         doc = Doctor(name,specialization)
         spce["doctors"].append(doc)
+        data = serialize_specializations(self.specializations)
+        save_data(data)
     def remove_doctor(self,specialization,name):
         spce = self.specializations[specialization]
         if not spce["doctors"] :
@@ -60,6 +64,7 @@ class hospital_manger:
             if not current_doctors:
                 continue
             result.append((specialization_name,current_doctors))
+
         return result
     def get_patient_info(self):
         result = []

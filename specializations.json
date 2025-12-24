@@ -1,0 +1,111 @@
+{
+    "General Medicine": {
+        "doctors": [],
+        "status": {
+            "0": [],
+            "1": [],
+            "3": []
+        }
+    },
+    "Emergency": {
+        "doctors": [],
+        "status": {
+            "0": [],
+            "1": [],
+            "3": []
+        }
+    },
+    "Cardiology": {
+        "doctors": [],
+        "status": {
+            "0": [],
+            "1": [
+                {
+                    "name": "mohemd",
+                    "status": 1
+                }
+            ],
+            "3": []
+        }
+    },
+    "Orthopedics": {
+        "doctors": [],
+        "status": {
+            "0": [],
+            "1": [],
+            "3": []
+        }
+    },
+    "Neurology": {
+        "doctors": [],
+        "status": {
+            "0": [],
+            "1": [],
+            "3": []
+        }
+    },
+    "Surgery": {
+        "doctors": [],
+        "status": {
+            "0": [],
+            "1": [],
+            "3": []
+        }
+    },
+    "Pediatrics": {
+        "doctors": [],
+        "status": {
+            "0": [],
+            "1": [],
+            "3": []
+        }
+    },
+    "ENT": {
+        "doctors": [],
+        "status": {
+            "0": [],
+            "1": [],
+            "3": []
+        }
+    },
+    "Dermatology": {
+        "doctors": [],
+        "status": {
+            "0": [],
+            "1": [],
+            "3": []
+        }
+    },
+    "Gynecology & Obstetrics": {
+        "doctors": [],
+        "status": {
+            "0": [],
+            "1": [],
+            "3": []
+        }
+    },
+    "ICU": {
+        "doctors": [],
+        "status": {
+            "0": [],
+            "1": [],
+            "3": []
+        }
+    },
+    "Radiology": {
+        "doctors": [],
+        "status": {
+            "0": [],
+            "1": [],
+            "3": []
+        }
+    },
+    "Laboratory": {
+        "doctors": [],
+        "status": {
+            "0": [],
+            "1": [],
+            "3": []
+        }
+    }
+}

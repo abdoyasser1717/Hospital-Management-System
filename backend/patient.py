@@ -4,6 +4,14 @@ class Patient(Person) :
     def __init__(self,name,status):
         super().__init__(name)
         self.status =status
+    def to_dict(self):
+        return {
+            "name" : self.name,
+            "status" : self.status,
+        }
+    @staticmethod
+    def from_dict(data):
+        return Patient(data["name"],data["status"])
 
     def __str__(self):
         status_text = Patient.STATUS[self.status]
