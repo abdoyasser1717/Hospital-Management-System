@@ -3,23 +3,6 @@ from backend.storage import *
 # from ..common.utilities import *
 class hospital_manger:
     def __init__(self):
-        # specializations_name = [
-        #     "General Medicine",
-        #     "Emergency",
-        #     "Cardiology",
-        #     "Orthopedics",
-        #     "Neurology",
-        #     "Surgery",
-        #     "Pediatrics",
-        #     "ENT",
-        #     "Dermatology",
-        #     "Gynecology & Obstetrics",
-        #     "ICU",
-        #     "Radiology",
-        #     "Laboratory"
-        # ]
-        #
-        # self.specializations =  {specialization : {"doctors" :[],"status":{self.NORMAL:[],self.URGENT:[],self.SUPER_URGENT:[]}} for specialization in specializations_name}
         data = load_data()
         self.specializations = deserialize_specializations(data)
         self.MAX_QUE = 10
@@ -34,6 +17,10 @@ class hospital_manger:
         save_data(data)
         return 'adding new patient successfully'
     def can_add_patient(self,specialization):
+        """
+        check whether patient can be added.
+
+        """
         num_patients = 0
         for status in self.specializations[specialization]["status"].values():
             num_patients += len(status)
@@ -56,6 +43,10 @@ class hospital_manger:
                 return "removed doctor successfully"
         return  "no doctor with such name"
     def get_doctors_info(self):
+        """
+        prepare doctor info
+
+        """
         result = []
         for specialization_name in self.specializations.keys():
             current_doctors = []
@@ -67,6 +58,10 @@ class hospital_manger:
 
         return result
     def get_patient_info(self):
+        """
+        prepare patient info
+
+        """
         result = []
         for specialization_name  in self.specializations.keys():
             curr_patient = []
@@ -93,11 +88,6 @@ class hospital_manger:
                     del status[idx]
                     return 'remove patient successfully'
         return 'there are no patients have such name '
-
-
-
-
-
 if __name__ == '__main__':
     hospital_manger = hospital_manger()
     print(hospital_manger.specializations)

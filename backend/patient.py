@@ -5,12 +5,14 @@ class Patient(Person) :
         super().__init__(name)
         self.status =status
     def to_dict(self):
+        # convert from object to dict to stored
         return {
             "name" : self.name,
             "status" : self.status,
         }
     @staticmethod
     def from_dict(data):
+        # convert from dict to object
         return Patient(data["name"],data["status"])
 
     def __str__(self):
