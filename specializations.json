@@ -1,47 +1,222 @@
 {
     "General Medicine": {
-        "doctors": [],
+        "doctors": [
+            {
+                "name": "Dr. James Torres",
+                "speciality": "General Medicine"
+            },
+            {
+                "name": "Dr. Steven Carter",
+                "speciality": "General Medicine"
+            }
+        ],
         "status": {
-            "0": [],
-            "1": [],
-            "3": []
-        }
-    },
-    "Emergency": {
-        "doctors": [],
-        "status": {
-            "0": [],
-            "1": [],
-            "3": []
-        }
-    },
-    "Cardiology": {
-        "doctors": [],
-        "status": {
-            "0": [],
+            "0": [
+                {
+                    "name": "Robert Nguyen",
+                    "status": 0
+                },
+                {
+                    "name": "Carol Gonzalez",
+                    "status": 0
+                },
+                {
+                    "name": "Dorothy Lopez",
+                    "status": 0
+                }
+            ],
             "1": [
                 {
-                    "name": "mohemd",
+                    "name": "Brian Nguyen",
+                    "status": 1
+                },
+                {
+                    "name": "Jessica Taylor",
                     "status": 1
                 }
             ],
-            "3": []
+            "2": [
+                {
+                    "name": "David Scott",
+                    "status": 2
+                }
+            ]
+        }
+    },
+    "Emergency": {
+        "doctors": [
+            {
+                "name": "Dr. Elizabeth Torres",
+                "speciality": "Emergency"
+            },
+            {
+                "name": "Dr. Jessica Young",
+                "speciality": "Emergency"
+            }
+        ],
+        "status": {
+            "0": [
+                {
+                    "name": "Barbara Hall",
+                    "status": 0
+                },
+                {
+                    "name": "Joshua Robinson",
+                    "status": 0
+                },
+                {
+                    "name": "Kenneth Moore",
+                    "status": 0
+                }
+            ],
+            "1": [
+                {
+                    "name": "Sandra Wright",
+                    "status": 1
+                },
+                {
+                    "name": "Anthony Carter",
+                    "status": 1
+                }
+            ],
+            "2": [
+                {
+                    "name": "Patricia Lopez",
+                    "status": 2
+                }
+            ]
+        }
+    },
+    "Cardiology": {
+        "doctors": [
+            {
+                "name": "Dr. Donald Smith",
+                "speciality": "Cardiology"
+            },
+            {
+                "name": "Dr. Elizabeth Thompson",
+                "speciality": "Cardiology"
+            }
+        ],
+        "status": {
+            "0": [
+                {
+                    "name": "Mary White",
+                    "status": 0
+                },
+                {
+                    "name": "Margaret Johnson",
+                    "status": 0
+                },
+                {
+                    "name": "Deborah Clark",
+                    "status": 0
+                }
+            ],
+            "1": [
+                {
+                    "name": "Michelle Johnson",
+                    "status": 1
+                },
+                {
+                    "name": "George Adams",
+                    "status": 1
+                }
+            ],
+            "2": [
+                {
+                    "name": "Joshua Lopez",
+                    "status": 2
+                }
+            ]
         }
     },
     "Orthopedics": {
-        "doctors": [],
+        "doctors": [
+            {
+                "name": "Dr. William Jones",
+                "speciality": "Orthopedics"
+            },
+            {
+                "name": "Dr. William Lopez",
+                "speciality": "Orthopedics"
+            }
+        ],
         "status": {
-            "0": [],
-            "1": [],
-            "3": []
+            "0": [
+                {
+                    "name": "David Brown",
+                    "status": 0
+                },
+                {
+                    "name": "Thomas Baker",
+                    "status": 0
+                },
+                {
+                    "name": "Melissa Wright",
+                    "status": 0
+                }
+            ],
+            "1": [
+                {
+                    "name": "Barbara Lee",
+                    "status": 1
+                },
+                {
+                    "name": "Anthony Mitchell",
+                    "status": 1
+                }
+            ],
+            "2": [
+                {
+                    "name": "Edward Thomas",
+                    "status": 2
+                }
+            ]
         }
     },
     "Neurology": {
-        "doctors": [],
+        "doctors": [
+            {
+                "name": "Dr. John Brown",
+                "speciality": "Neurology"
+            },
+            {
+                "name": "Dr. Melissa Walker",
+                "speciality": "Neurology"
+            }
+        ],
         "status": {
-            "0": [],
-            "1": [],
-            "3": []
+            "0": [
+                {
+                    "name": "Ashley Allen",
+                    "status": 0
+                },
+                {
+                    "name": "Dorothy Clark",
+                    "status": 0
+                },
+                {
+                    "name": "Carol Lee",
+                    "status": 0
+                }
+            ],
+            "1": [
+                {
+                    "name": "Steven Harris",
+                    "status": 1
+                },
+                {
+                    "name": "John Sanchez",
+                    "status": 1
+                }
+            ],
+            "2": [
+                {
+                    "name": "Betty Taylor",
+                    "status": 2
+                }
+            ]
         }
     },
     "Surgery": {
@@ -49,7 +224,7 @@
         "status": {
             "0": [],
             "1": [],
-            "3": []
+            "2": []
         }
     },
     "Pediatrics": {
@@ -57,7 +232,7 @@
         "status": {
             "0": [],
             "1": [],
-            "3": []
+            "2": []
         }
     },
     "ENT": {
@@ -65,7 +240,7 @@
         "status": {
             "0": [],
             "1": [],
-            "3": []
+            "2": []
         }
     },
     "Dermatology": {
@@ -73,7 +248,7 @@
         "status": {
             "0": [],
             "1": [],
-            "3": []
+            "2": []
         }
     },
     "Gynecology & Obstetrics": {
@@ -81,7 +256,7 @@
         "status": {
             "0": [],
             "1": [],
-            "3": []
+            "2": []
         }
     },
     "ICU": {
@@ -89,7 +264,7 @@
         "status": {
             "0": [],
             "1": [],
-            "3": []
+            "2": []
         }
     },
     "Radiology": {
@@ -97,7 +272,7 @@
         "status": {
             "0": [],
             "1": [],
-            "3": []
+            "2": []
         }
     },
     "Laboratory": {
@@ -105,7 +280,7 @@
         "status": {
             "0": [],
             "1": [],
-            "3": []
+            "2": []
         }
     }
 }

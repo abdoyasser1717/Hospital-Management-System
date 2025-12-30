@@ -22,7 +22,7 @@ class Frontend_Manger :
         display = '\n'.join(menu)
         print(display)
         try :
-            choice = int(input('Enter your choice(from 1 to 10): '))
+            choice = int(input('Enter your choice(from 1 to 9): '))
 
         except ValueError:
             print('Please enter a number.')
@@ -31,10 +31,13 @@ class Frontend_Manger :
 
     def run(self):
         while True:
+            print('--'*20)
             choice = self.execute_menu()
-            if choice > 10 or choice < 1 :
-                print('Please enter a number from 1 to 5.')
+            if choice >  9 or choice < 1 :
+                print('--' * 20)
+                print('Please enter a number from 1 to 9.')
             elif choice == 1 :
+                print('--' * 20)
                 specialization = check_input_specialization(input('Enter specialization: '))
                 if not specialization:
                     continue
@@ -47,13 +50,16 @@ class Frontend_Manger :
                     continue
                 self.backend.add_new_patient(specialization,patient,status)
             elif choice == 2 :
+                print('--' * 20)
                 self.print_all_patients()
             elif choice == 3 :
+                print('--' * 20)
                 specialization = check_input_specialization(input('Enter specialization: '))
                 if not specialization:
                     continue
                 self.get_next_patient(specialization)
             elif choice == 4 :
+                print('--' * 20)
                 specialization = check_input_specialization(input('Enter specialization: '))
                 if not specialization:
                     continue
@@ -62,7 +68,9 @@ class Frontend_Manger :
                     continue
                 result = self.backend.remove_leaving_patient(specialization,patient)
                 print(result)
+                # print('-' * 10)
             elif choice == 5 :
+                print("--"*20)
                 specialization = check_input_specialization(input('Enter specialization: '))
                 if not specialization:
                     continue
@@ -70,7 +78,9 @@ class Frontend_Manger :
                 if not doctor:
                     continue
                 self.backend.add_doctor(specialization,doctor)
+                # print('-' * 10)
             elif choice == 6 :
+                print('--'*20)
                 specialization = check_input_specialization(input('Enter specialization: '))
                 if not specialization:
                     continue
@@ -78,19 +88,21 @@ class Frontend_Manger :
                 if not doctor:
                     continue
                 print(self.backend.remove_doctor(specialization,doctor))
+                # print('-' * 10)
             elif choice == 7 :
+                print('--'*20)
                 specialization = check_input_specialization(input('Enter specialization: '))
                 if not specialization:
                     continue
                 doctor = input_valid(input('Enter the doctor name : '))
                 if not doctor:
                     continue
-                self.backend.remove_doctor(specialization,doctor)
                 update_choice = input('Do you want to update the doctor specialization? (y/n): ')
                 if update_choice == 'y':
                    specialization = check_input_specialization(input('Enter specialization: '))
                    if not specialization:
                         continue
+                   self.backend.remove_doctor(specialization, doctor)
                    self.backend.add_doctor(specialization,doctor)
                 elif update_choice == 'n':
                       update_choice = input('Do you want to update the doctor name ? (y/n): ')
@@ -98,12 +110,18 @@ class Frontend_Manger :
                             doctor = input_valid(input('Enter the doctor name : '))
                             if not doctor:
                                 continue
+                            self.backend.remove_doctor(specialization, doctor)
                             self.backend.add_doctor(specialization, doctor)
                 else:
                     print('Please enter a valid input.')
+                # print('-' * 10)
+
             elif choice == 8 :
+                print('--'*20)
                 self.print_all_doctors()
+                # print('-' * 10)
             elif choice == 9 :
+                print("exit program")
                 exit()
     def print_all_patients(self):
         patient_info = self.backend.get_patient_info()
