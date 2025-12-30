@@ -9,23 +9,23 @@ A simple hospital management system written in Python using OOP
 * Data Persistence:Automatically saves data to a JSON file
 ## Project Structure 
 
-hospital_management_system/
-├── backend/
-│ ├── init.py
-│ ├── Person.py 
-│ ├── doctor.py
-│ ├── patient.py 
-│ ├── hospital_Manger.py 
-│ └── storage.py 
-├── frontend/
-│ ├── init.py
-│ └── hospital_project.py 
-├── common/
-│ └── utilities.py 
-├── script.py 
-├── specializations.json
-├── README.md
-└── .gitignore
+# hospital_management_system/
+# ├── backend/
+# │ ├── init.py
+# │ ├── Person.py 
+# │ ├── doctor.py
+# │ ├── patient.py 
+# │ ├── hospital_Manger.py 
+# │ └── storage.py 
+# ├── frontend/
+# │ ├── init.py
+# │ └── hospital_project.py 
+# ├── common/
+# │ └── utilities.py 
+# ├── script.py 
+# ├── specializations.json
+# ├── README.md
+# └── .gitignore 
 ## How to Run
 # Requirements
 * Python 3.6 or higher
@@ -33,7 +33,7 @@ hospital_management_system/
 
 1. Clone the repository:
 
-git clone https://github.com/username/hospital-management-system.git
+git clone https://github.com/abdoyasser1717/Hospital-Management-System.git
 cd hospital-management-system
 
 
